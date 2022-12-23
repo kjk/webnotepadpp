@@ -17,6 +17,10 @@
   let lineEncoding = "Windows (CRLF)";
   let charEncoding ="UTF-8";
   let typingMode = "INS"; // OVR
+
+  function newFile() {
+    console.log("newFile");
+  }
 </script>
 
 <main class="fixed inset-0 grid">
@@ -24,6 +28,7 @@
     <a class="px-2 hover:bg-gray-200" href="/s/home">home</a>
     <a class="px-2 hover:bg-gray-200" href="/s/prefs">prefs</a>
     <a class="px-2 border-t-2 hover:bg-gray-200" href="/f/foo.txt">foo.txt</a>
+    <button class="px-2 hover:bg-gray-200" onclick={newFile}>+</button>
   </div>
   <div class="min-h-0 overflow-y-hidden">
     <CodeMirror value={v} class="editor"/>
