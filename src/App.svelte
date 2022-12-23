@@ -20,7 +20,11 @@
 </script>
 
 <main class="fixed inset-0 grid">
-  <div></div>
+  <div class="flex text-xs">
+    <a class="px-2 hover:bg-gray-200" href="/s/home">home</a>
+    <a class="px-2 hover:bg-gray-200" href="/s/prefs">prefs</a>
+    <a class="px-2 border-t-2 hover:bg-gray-200" href="/f/foo.txt">foo.txt</a>
+  </div>
   <div class="min-h-0 overflow-y-hidden">
     <CodeMirror value={v} class="editor"/>
   </div>
