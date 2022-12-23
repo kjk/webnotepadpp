@@ -8,7 +8,7 @@
 	import { indentUnit } from "@codemirror/language";
 	import { debounce } from "./util";
 
-	let classes = "";
+	let classes : string = "";
 	export { classes as class };
 	export let value = "";
 
@@ -29,8 +29,8 @@
 	const is_browser = typeof window !== "undefined";
 	const dispatch = createEventDispatcher();
 
-	let element; // : HTMLDivElement;
-	let view; //: EditorView;
+	let element : HTMLDivElement;
+	let view : EditorView;
 
 	let update_from_prop = false;
 	let update_from_state = false;

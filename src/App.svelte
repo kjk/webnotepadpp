@@ -1,8 +1,6 @@
-<script>
+<script lang="ts">
   import logo from './assets/svelte.png'
-	import MenuBar from "./lib/MenuBar.svelte";
   import CodeMirror from "./lib/CodeMirror.svelte";
-  import { mainMenuBar } from "./menu-app.ts";
 
   let s = "hello\n";
   let v = s;
@@ -22,10 +20,9 @@
 </script>
 
 <main class="fixed inset-0 grid">
-	<MenuBar def={mainMenuBar}/>
-    <div class="min-h-0 overflow-y-hidden">
-      <CodeMirror value={v} class="editor"/>
-    </div>
+  <div class="min-h-0 overflow-y-hidden">
+    <CodeMirror value={v} class="editor"/>
+  </div>
   <div class="flex justify-between px-2 bg-gray-50">
     <div>Normal length: {normalLength}</div>
     <div>Lines: {lineCount}</div>
