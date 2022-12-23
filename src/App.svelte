@@ -20,6 +20,7 @@
 </script>
 
 <main class="fixed inset-0 grid">
+  <div></div>
   <div class="min-h-0 overflow-y-hidden">
     <CodeMirror value={v} class="editor"/>
   </div>
