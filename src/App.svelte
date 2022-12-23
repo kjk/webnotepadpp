@@ -2,7 +2,7 @@
   import logo from './assets/svelte.png'
 	import MenuBar from "./lib/MenuBar.svelte";
   import CodeMirror from "./lib/CodeMirror.svelte";
-  import { mainMenuBar } from "./menu-app.js";
+  import { mainMenuBar } from "./menu-app.ts";
 
   let s = "hello\n";
   let v = s;

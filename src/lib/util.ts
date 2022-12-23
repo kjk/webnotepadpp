@@ -5,7 +5,7 @@
  * @param threshold - The delay to avoid recalling the function.
  * @param execAsap - If true, the Function is called at the start of the threshold, otherwise the Function is called at the end of the threshold.
  */
-export function debounce(func, threshold, execAsap = false) {
+export function debounceOld(func, threshold, execAsap = false) {
     let timeout;
     return function debounced(...args) {
         const self = this;
@@ -21,3 +21,11 @@ export function debounce(func, threshold, execAsap = false) {
         }
     };
 }
+
+export function debounce(fn: Function, ms = 300) {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return function (this: any, ...args: any[]) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), ms);
+  };
+};

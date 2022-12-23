@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let def; // array of menu items
 
   const menuDiv = "---";  
